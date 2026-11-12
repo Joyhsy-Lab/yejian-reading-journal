@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f6f5ef">
+<meta name="description" content="用页间整理书架、记录读书笔记、追踪阅读时间与进度。">
+<title>页间 · 读书笔记</title>
+<link rel="stylesheet" href="style.css?v=3">
+<script src="stats.js?v=1" defer></script>
+<script src="app.js?v=2" defer></script>
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar">
+  <a class="brand" href="#home" aria-label="页间首页"><span class="brand-mark" data-icon="book"></span><span><strong>页间</strong><small>读书笔记</small></span></a>
+  <nav aria-label="主要导航">
+    <a href="#home" data-view="home"><i data-icon="home"></i>阅读总览</a>
+    <a href="#books" data-view="books"><i data-icon="shelf"></i>我的书架</a>
+    <a href="#notes" data-view="notes"><i data-icon="pen"></i>读书笔记</a>
+    <a href="#timer" data-view="timer"><i data-icon="clock"></i>阅读计时<span class="nav-timer" id="nav-timer" hidden></span></a>
+    <a href="#progress" data-view="progress"><i data-icon="chart"></i>阅读进度</a>
+  </nav>
+  <div class="side-foot">
+    <button class="quiet" data-action="backup"><i data-icon="archive"></i>数据备份</button>
+    <span class="local"><b></b>浏览器本地保存</span>
+  </div>
+</aside>
+<div class="workspace">
+<header class="top">
+  <div class="crumb"><span>阅读空间</span><i data-icon="chevron"></i><strong id="breadcrumb">阅读总览</strong></div>
+  <div class="top-actions"><button class="search-button" data-action="search" aria-label="搜索书籍和笔记"><i data-icon="search"></i><span>搜索书籍、笔记</span><kbd>⌘ K</kbd></button><button class="button primary" data-action="note"><i data-icon="plus"></i>新建笔记</button></div>
+</header>
+<main id="main" tabindex="-1"></main>
+</div>
+</div>
+<dialog id="dialog" aria-labelledby="dialog-title"></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
